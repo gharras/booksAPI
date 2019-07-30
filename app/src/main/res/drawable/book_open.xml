@@ -1,0 +1,23 @@
+<!--
+    we get this drawable file vector from https://materialdesignicons.com/
+    the name of this drawable is open-book and we have used the view Vector Drawable
+    option then copy past it here
+ -->
+
+<!--
+    to be able to use the @color/colorAccent resource we need to add
+    defaultConfig{
+        vectorDrawables.useSupportLibrary = true
+    }
+    to our build.gradle file
+-->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@color/colorAccent"
+        android:pathData="M13,12H20V13.5H13M13,9.5H20V11H13M13,14.5H20V16H13M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M21,19H12V6H21" />
+</vector>

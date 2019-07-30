@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    this layout represent our Item layout that will be included in the the recycle view
+    so that we can see out Item on it
+-->
+<!--
+    we use android:weightSum="100" so that we can give each element of our layout a weight
+    so that we can control how much each element can take from the available space
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+    <!--
+        to give our icon 15% of available space we need to do some change
+        first rather than putting android:layout_width="wrap_content" we will change the value to 0dp
+        then add android:layout_weight="15" to get the 15 of the 100 existing weight
+        and the same for our second layout but with a weight of 85
+    -->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="15"
+        android:padding="8dp"
+        android:src="@drawable/book_open" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="85"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title TextView"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/title_size" />
+
+        <TextView
+            android:id="@+id/tvAuthors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title Authors"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/authors_size" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="70"
+                android:id="@+id/tvPublisher"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:hint="text Publisher"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:id="@+id/tvPublishedDate"
+                android:textAlignment="textEnd"
+                android:gravity="end"
+                android:hint="Published Date"
+                android:paddingEnd="@dimen/published_date_padding"
+                android:paddingRight="@dimen/published_date_padding"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
